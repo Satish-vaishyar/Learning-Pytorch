@@ -4,7 +4,22 @@
 
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&lo### 🗺️ **Immediate Next Steps (Chapter 1: PyTorch Workflow)**
+
+You're currently working through the PyTorch workflow fundamentals:
+
+- ✅ **Data Preparation** - Synthetic linear regression dataset
+- ✅ **Train/Test Splitting** - 80/20 data division
+- ✅ **Model Architecture** - Custom `LinearRegressionModel` class
+- 🔄 **Model Training** - Setting up loss functions and optimizers
+- ⏳ **Evaluation** - Testing model performance
+- ⏳ **Model Persistence** - Saving and loading trained models
+
+**Current Focus:** Building and understanding your first PyTorch model with:
+- `nn.Module` inheritance
+- `nn.Parameter` for learnable weights and bias
+- `forward()` method implementation
+- Model state inspection and parameter managementite)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
 ![Computer Vision](https://img.shields.io/badge/Computer%20Vision-FF6B6B?style=for-the-badge&logo=opencv&logoColor=white)
 ![Deep Learning](https://img.shields.io/badge/Deep%20Learning-4ECDC4?style=for-the-badge&logo=tensorflow&logoColor=white)
@@ -40,24 +55,39 @@ This repository contains a comprehensive PyTorch learning journey covering every
 </details>
 
 <details>
-<summary>🗺️ <strong>Chapter 1: PyTorch Workflow</strong> (Coming Next)</summary>
+<summary>🗺️ <strong>Chapter 1: PyTorch Workflow</strong> (In Progress)</summary>
+
+**📖 Notebook:** [`pytorch_workflow.ipynb`](./pytorch_workflow.ipynb)
 
 **🎯 What you'll learn:**
 - End-to-end PyTorch machine learning workflow
 - Creating datasets with linear regression
-- Training and test set splitting
-- Building your first PyTorch model
+- Training and test set splitting (80/20 split)
+- Building your first PyTorch model with `nn.Module`
+- Understanding `nn.Parameter` and `requires_grad`
 - Loss functions and optimizers
 - Training and testing loops
 - Model saving and loading
 
-**📊 Progress:** 🔄 **In Progress**
+**📊 Progress:** 🔄 **In Progress** - Building Linear Regression Model
 
-**🔗 Key Topics:**
-- `torch.nn.Module` and model building classes
-- PyTorch training loop intuition
-- Model predictions and evaluation
-- Putting everything together
+**✅ Completed Sections:**
+- ✅ Data preparation and loading
+- ✅ Creating synthetic linear data (y = 0.7x + 0.3)
+- ✅ Train/test split implementation
+- ✅ Data visualization with matplotlib
+- ✅ Linear regression model class creation
+- ✅ Understanding PyTorch model building essentials
+- 🔄 Model parameter inspection (current)
+
+**🔗 Key Concepts Covered:**
+- `torch.arange()` for creating data ranges
+- `unsqueeze()` for tensor dimension manipulation
+- Custom plotting functions for train/test visualization
+- `nn.Module` inheritance for model creation
+- `nn.Parameter` for learnable parameters
+- `forward()` method definition
+- Model state inspection with `state_dict()`
 
 </details>
 
@@ -201,10 +231,15 @@ pip install requests pillow         # For custom datasets
    jupyter notebook pytorch_fundamentals.ipynb
    ```
 
-3. **Or use VS Code**
+3. **Continue to Chapter 1: Workflow** (Current)
+   ```bash
+   jupyter notebook pytorch_workflow.ipynb
+   ```
+
+4. **Or use VS Code**
    - Open the folder in VS Code
    - Install the Jupyter extension
-   - Open `pytorch_fundamentals.ipynb`
+   - Open any `.ipynb` file to start learning
 
 4. **Progress through chapters sequentially**
    - Each chapter builds upon the previous one
@@ -222,8 +257,8 @@ graph TD
     C --> D[😎 Computer Vision]
     D --> E[🗃️ Custom Datasets]
     
-    A -.-> |You are here| F[✅ Tensor Operations<br/>✅ NumPy Integration<br/>✅ Random Seeds]
-    B -.-> G[⏳ Training Loops<br/>⏳ Model Building<br/>⏳ Optimization]
+    A -.-> |✅ Complete| F[✅ Tensor Operations<br/>✅ NumPy Integration<br/>✅ Random Seeds]
+    B -.-> |🔄 In Progress| G[✅ Data Preparation<br/>✅ Model Building<br/>🔄 Training Setup]
     C -.-> H[⏳ Classification<br/>⏳ Non-linearity<br/>⏳ Multiclass]
     D -.-> I[⏳ CNNs<br/>⏳ Image Processing<br/>⏳ GPU Training]
     E -.-> J[⏳ Custom Data<br/>⏳ Data Augmentation<br/>⏳ Model Analysis]
@@ -402,15 +437,13 @@ Found a bug or want to improve the notebooks? Contributions are welcome!
 ```
 Learning-Pytorch/
 │
-├── 📓 pytorch_fundamentals.ipynb    # Chapter 0: Fundamentals (Current)
+├── 📓 pytorch_fundamentals.ipynb    # Chapter 0: Fundamentals ✅ Complete
+├── 📓 pytorch_workflow.ipynb        # Chapter 1: Workflow 🔄 In Progress
+├── 📓 demo.ipynb                    # Practice/experimental notebook
 ├── 📝 README.md                     # This comprehensive guide
 ├── 📄 LICENSE                       # MIT License
 │
-├── 🗺️ chapter_1_workflow/           # Coming Next
-│   ├── 📓 pytorch_workflow.ipynb
-│   └── 📊 datasets/
-│
-├── 🤨 chapter_2_classification/     # Planned
+├── 🤨 chapter_2_classification/     # Coming Next
 │   ├── 📓 neural_classification.ipynb
 │   └── 📊 data/
 │
@@ -465,6 +498,6 @@ The notebooks and exercises in this repository follow the course structure while
 [![Stars](https://img.shields.io/github/stars/Satish-vaishyar/Learning-Pytorch?style=social)](https://github.com/Satish-vaishyar/Learning-Pytorch/stargazers)
 [![Forks](https://img.shields.io/github/forks/Satish-vaishyar/Learning-Pytorch?style=social)](https://github.com/Satish-vaishyar/Learning-Pytorch/network/members)
 
-**Next Chapter Coming Soon: PyTorch Workflow! 🗺️**
+**Next Chapter Coming Soon: Neural Network Classification! 🤨**
 
 </div>
