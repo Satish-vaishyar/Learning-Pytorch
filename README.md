@@ -4,22 +4,26 @@
 
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&lo### 🗺️ **Immediate Next Steps (Chapter 1: PyTorch Workflow)**
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&lo### 🗺️ **Current Progress Update (Chapter 1: PyTorch Workflow)**
 
-You're currently working through the PyTorch workflow fundamentals:
+You've made excellent progress and are nearly finished with Chapter 1:
 
 - ✅ **Data Preparation** - Synthetic linear regression dataset
 - ✅ **Train/Test Splitting** - 80/20 data division
 - ✅ **Model Architecture** - Custom `LinearRegressionModel` class
-- 🔄 **Model Training** - Setting up loss functions and optimizers
-- ⏳ **Evaluation** - Testing model performance
+- ✅ **Model Training Setup** - Loss functions (`nn.L1Loss`) and optimizers (`SGD`)
+- ✅ **Training Loop** - Complete 5-step training process implemented
+- ✅ **Inference** - Making predictions with `torch.inference_mode()`
+- 🔄 **Model Evaluation** - Testing loops and performance metrics
 - ⏳ **Model Persistence** - Saving and loading trained models
 
-**Current Focus:** Building and understanding your first PyTorch model with:
-- `nn.Module` inheritance
-- `nn.Parameter` for learnable weights and bias
-- `forward()` method implementation
-- Model state inspection and parameter managementite)
+**Current Focus:** You've successfully implemented the core training loop with:
+- Forward pass through the model
+- Loss calculation and backpropagation
+- Optimizer steps for parameter updates
+- Model mode switching between training and evaluation
+
+**Just completed:** Training loop with proper PyTorch training patterns including `model.train()`, `optimizer.zero_grad()`, `loss.backward()`, and `optimizer.step()`.ite)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
 ![Computer Vision](https://img.shields.io/badge/Computer%20Vision-FF6B6B?style=for-the-badge&logo=opencv&logoColor=white)
 ![Deep Learning](https://img.shields.io/badge/Deep%20Learning-4ECDC4?style=for-the-badge&logo=tensorflow&logoColor=white)
@@ -55,7 +59,7 @@ This repository contains a comprehensive PyTorch learning journey covering every
 </details>
 
 <details>
-<summary>🗺️ <strong>Chapter 1: PyTorch Workflow</strong> (In Progress)</summary>
+<summary>🗺️ <strong>Chapter 1: PyTorch Workflow</strong> (Nearly Complete)</summary>
 
 **📖 Notebook:** [`pytorch_workflow.ipynb`](./pytorch_workflow.ipynb)
 
@@ -67,27 +71,45 @@ This repository contains a comprehensive PyTorch learning journey covering every
 - Understanding `nn.Parameter` and `requires_grad`
 - Loss functions and optimizers
 - Training and testing loops
-- Model saving and loading
+- Model predictions with inference mode
 
-**📊 Progress:** 🔄 **In Progress** - Building Linear Regression Model
+**📊 Progress:** 🔄 **90% Complete** - Training Loop Implementation
 
 **✅ Completed Sections:**
 - ✅ Data preparation and loading
 - ✅ Creating synthetic linear data (y = 0.7x + 0.3)
-- ✅ Train/test split implementation
+- ✅ Train/test split implementation (80/20)
 - ✅ Data visualization with matplotlib
-- ✅ Linear regression model class creation
+- ✅ Linear regression model class creation (`LinearRegressionModel`)
 - ✅ Understanding PyTorch model building essentials
-- 🔄 Model parameter inspection (current)
+- ✅ Model parameter inspection and state management
+- ✅ Making predictions with `torch.inference_mode()`
+- ✅ Loss function setup (`nn.L1Loss`)
+- ✅ Optimizer configuration (`torch.optim.SGD`)
+- ✅ Training loop implementation with backpropagation
+- 🔄 Model evaluation and testing loop (current)
 
-**🔗 Key Concepts Covered:**
-- `torch.arange()` for creating data ranges
-- `unsqueeze()` for tensor dimension manipulation
-- Custom plotting functions for train/test visualization
-- `nn.Module` inheritance for model creation
+**🔗 Key Concepts Mastered:**
+- `torch.arange()` and tensor manipulation
+- `nn.Module` inheritance for custom models
 - `nn.Parameter` for learnable parameters
-- `forward()` method definition
-- Model state inspection with `state_dict()`
+- `forward()` method implementation
+- `torch.inference_mode()` vs `torch.no_grad()`
+- Loss function selection and usage
+- Optimizer setup with learning rates
+- Complete training loop with 5 essential steps:
+  1. Forward pass
+  2. Loss calculation
+  3. Optimizer zero grad
+  4. Backpropagation
+  5. Optimizer step
+- Model mode switching (`train()` vs `eval()`)
+
+**🎯 Next Steps:**
+- ⏳ Testing loop implementation
+- ⏳ Model evaluation and metrics
+- ⏳ Multiple epoch training
+- ⏳ Model saving and loading
 
 </details>
 
@@ -231,7 +253,7 @@ pip install requests pillow         # For custom datasets
    jupyter notebook pytorch_fundamentals.ipynb
    ```
 
-3. **Continue to Chapter 1: Workflow** (Current)
+3. **Continue to Chapter 1: Workflow** (90% Complete)
    ```bash
    jupyter notebook pytorch_workflow.ipynb
    ```
@@ -258,7 +280,7 @@ graph TD
     D --> E[🗃️ Custom Datasets]
     
     A -.-> |✅ Complete| F[✅ Tensor Operations<br/>✅ NumPy Integration<br/>✅ Random Seeds]
-    B -.-> |🔄 In Progress| G[✅ Data Preparation<br/>✅ Model Building<br/>🔄 Training Setup]
+    B -.-> |🔄 90% Complete| G[✅ Data Preparation<br/>✅ Model Building<br/>✅ Training Loop]
     C -.-> H[⏳ Classification<br/>⏳ Non-linearity<br/>⏳ Multiclass]
     D -.-> I[⏳ CNNs<br/>⏳ Image Processing<br/>⏳ GPU Training]
     E -.-> J[⏳ Custom Data<br/>⏳ Data Augmentation<br/>⏳ Model Analysis]
@@ -438,7 +460,7 @@ Found a bug or want to improve the notebooks? Contributions are welcome!
 Learning-Pytorch/
 │
 ├── 📓 pytorch_fundamentals.ipynb    # Chapter 0: Fundamentals ✅ Complete
-├── 📓 pytorch_workflow.ipynb        # Chapter 1: Workflow 🔄 In Progress
+├── 📓 pytorch_workflow.ipynb        # Chapter 1: Workflow 🔄 90% Complete
 ├── 📓 demo.ipynb                    # Practice/experimental notebook
 ├── 📝 README.md                     # This comprehensive guide
 ├── 📄 LICENSE                       # MIT License
